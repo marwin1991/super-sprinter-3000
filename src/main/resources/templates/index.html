@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title th:text="${title}"></title>
 </head>
 <body>
 <a th:href="@{/add_user_story}">Add User Story</a>
 
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Story</th>
+        <th>Acceptance criteria</th>
+        <th>Business value</th>
+        <th>Estimation</th>
+        <th>Status</th>
+    </tr>
+    <tr th:each="story: ${stories}">
+        <td th:text="${story.id}"></td>
+        <td th:text="${story.title}"></td>
+        <td th:text="${story.description}"></td>
+        <td th:text="${story.acceptanceCriteria}"></td>
+        <td th:text="${story.businessValue}"></td>
+        <td th:text="${story.estimation}"></td>
+        <td th:text="${story.status}"></td>
+    </tr>
+
+
+</table>
 </body>
 </html>

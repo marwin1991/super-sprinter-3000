@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+</head>
+<body>
+<form action="#" th:action="@{/add_user_story}" th:object="${userStory}" method="post">
+    <p>Title: <input type="text" th:field="*{title}"/></p>
+    <p>Description: <input type="text" th:field="*{description}"/></p>
+    <p>Acceptance criteria: <input type="text" th:field="*{acceptanceCriteria}"/></p>
+    <p>Business value: <input type="text" th:field="*{businessValue}"/></p>
+    <p>Estimation: <input type="text" th:field="*{estimation}"/></p>
+    <p>Status: <input type="text" th:field="*{status}"/></p>
+    <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+</form>
+</body>
+</html>
