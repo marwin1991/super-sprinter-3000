@@ -7,12 +7,12 @@ public class UserStory {
     private String acceptanceCriteria;
     private int businessValue;
     private int estimation;
-    private String status;
+    private StoryStatus status;
 
     public UserStory() {
     }
 
-    public UserStory(int id, String title, String description, String acceptanceCriteria, int businessValue, int estimation, String status) {
+    public UserStory(int id, String title, String description, String acceptanceCriteria, int businessValue, int estimation, StoryStatus status) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -70,11 +70,11 @@ public class UserStory {
         this.estimation = estimation;
     }
 
-    public String getStatus() {
+    public StoryStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(StoryStatus status) {
         this.status = status;
     }
 }
