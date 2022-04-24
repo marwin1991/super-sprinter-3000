@@ -12,11 +12,15 @@ public class UserStoryRepository {
 
     @PostConstruct
     public void init() {
-        userStories.add(new UserStory(0, "Story 1", "String description", "String acceptanceCriteria", 200, 5, StoryStatus.IN_PROGRESS));
+        userStories.add(new UserStory(0, "Story 1", "String description", "String acceptanceCriteria", 200, 5, StoryStatus.IN_PROGRESS.toString()));
     }
 
     public List<UserStory> findAll(){
         return userStories;
+    }
+
+    public void save(UserStory userStory){
+        userStories.add(userStory);
     }
 
 

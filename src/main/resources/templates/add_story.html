@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+</head>
+<body>
+<h1 th:text="${title}"></h1>
+<br>
+<!--/*@thymesVar id="user_story" type="com.codecool.sprinter3000.UserStory"*/-->
+<form th:action="@{/add_story}" th:object="${user_story}" method="post">
+    <p>Title: <input type="text" th:field="*{title}"/></p>
+    <p>User Story: <input type="text" th:field="*{description}"/></p>
+    <p>Acceptance Criteria: <input type="text" th:field="*{acceptanceCriteria}"/></p>
+    <p>Business Value: <input type="text" th:field="*{businessValue}"/></p>
+    <p>Estimation: <input type="text" th:field="*{estimation}"/></p>
+    <p>Status: <input type="text" th:field="*{status}"/></p>
+    <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+</form>
+</body>
+</html>
