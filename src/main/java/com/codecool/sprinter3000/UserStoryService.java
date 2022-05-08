@@ -13,4 +13,8 @@ public class UserStoryService {
     public List<UserStory> getAllStories(){
         return userStoryRepository.findAll();
     }
+
+    public void add(UserStory userStory){
+        userStoryRepository.save(userStory);
+    }
 }

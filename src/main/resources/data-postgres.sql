@@ -1,0 +1,1 @@
+INSERT INTO public.user_story(acceptance_criteria, business_value, description, estimation, status, title) VALUES ('asd', 12, '321', 13, 1, '213');

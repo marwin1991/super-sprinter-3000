@@ -1,8 +1,6 @@
 package com.codecool.sprinter3000;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +9,9 @@ import javax.persistence.Id;
 
 @Setter
 @Getter
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class UserStory {
     @Id
