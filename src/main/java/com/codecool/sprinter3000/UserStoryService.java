@@ -16,6 +16,4 @@ public record UserStoryService(UserStoryRepository userStoryRepository) {
         userStory.setId(new Random().nextInt());
         userStoryRepository.save(userStory);
     }
-
-
 }
