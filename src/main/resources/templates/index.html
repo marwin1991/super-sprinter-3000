@@ -9,6 +9,11 @@
 <table>
   <tr th:each="story: ${user_stories}">
     <td th:text="${story.id}"></td>
+    <td th:text="${story.title}"></td>
+    <td th:text="${story.description}"></td>
+    <td th:text="${story.status}"></td>
+    <td th:text="${story.acceptanceCriteria}"></td>
+    <td th:text="${story.estimation}"></td>
   </tr>
 </table>
 </body>
